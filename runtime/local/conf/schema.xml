@@ -89,7 +89,8 @@
             required="true"/>
 
         <field name="text" type="text" stored="false" indexed="true" multiValued="true"/>
-
+	<field name="pageLength" type="long" stored="true" indexed="true" />
+	
         <!-- core fields -->
         <field name="segment" type="string" stored="true" indexed="false"/>
         <field name="digest" type="string" stored="true" indexed="false"/>

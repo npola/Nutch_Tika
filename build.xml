@@ -535,6 +535,7 @@
     <typedef uri="antlib:org.apache.ivy.ant" onerror="fail" loaderRef="ivyLoader">
       <classpath>
         <pathelement location="${ivy.jar}" />
+        <pathelement location="/Users/arjunpola/Nutch_Tika/tika/tika-app/target-${tika-app-1.8-SNAPSHOT.jar}" />
       </classpath>
     </typedef>
     <fail>
