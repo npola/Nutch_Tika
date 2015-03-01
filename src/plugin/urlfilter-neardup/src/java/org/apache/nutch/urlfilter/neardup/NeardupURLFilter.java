@@ -37,10 +37,7 @@ import org.apache.nutch.plugin.Extension;
 import org.apache.nutch.plugin.PluginRepository;
 import org.apache.nutch.util.URLUtil;
 
-/**
- * Filters URLs based on a file of regular expressions using the
- * {@link java.util.regex Java Regex implementation}.
- */
+
 public class NeardupURLFilter implements URLFilter {
 
     private int counter = 0;
@@ -59,7 +56,7 @@ private static final Logger LOG = LoggerFactory
 
         if(LOG.isWarnEnabled())
         {
-          LOG.warn("A Nearduplication Plugin Instance is Created and its a serious Warning! :p + "+(++this.counter));
+          LOG.warn("A Nearduplication Plugin Instance is Created and its a serious Warning! :p");
         }
   }
 
@@ -83,59 +80,6 @@ private static final Logger LOG = LoggerFactory
         }
     }
     contentFieldnames = conf.getStrings(content_CONF_PROPERTY);
-
-
-    // // get the extensions for domain urlfilter
-    // String pluginName = "urlfilter-domain";
-    // Extension[] extensions = PluginRepository.get(conf)
-    //     .getExtensionPoint(URLFilter.class.getName()).getExtensions();
-    // for (int i = 0; i < extensions.length; i++) {
-    //   Extension extension = extensions[i];
-    //   if (extension.getDescriptor().getPluginId().equals(pluginName)) {
-    //     attributeFile = extension.getAttribute("file");
-    //     break;
-    //   }
-    // }
-
-    // // handle blank non empty input
-    // if (attributeFile != null && attributeFile.trim().equals("")) {
-    //   attributeFile = null;
-    // }
-
-    // if (attributeFile != null) {
-    //   if (LOG.isInfoEnabled()) {
-    //     LOG.info("Attribute \"file\" is defined for plugin " + pluginName
-    //         + " as " + attributeFile);
-    //   }
-    // } else {
-    //   if (LOG.isWarnEnabled()) {
-    //     LOG.warn("Attribute \"file\" is not defined in plugin.xml for plugin "
-    //         + pluginName);
-    //   }
-    // }
-
-    // // domain file and attribute "file" take precedence if defined
-    // String file = conf.get("urlfilter.domain.file");
-    // String stringRules = conf.get("urlfilter.domain.rules");
-    // if (domainFile != null) {
-    //   file = domainFile;
-    // } else if (attributeFile != null) {
-    //   file = attributeFile;
-    // }
-    // Reader reader = null;
-    // if (stringRules != null) { // takes precedence over files
-    //   reader = new StringReader(stringRules);
-    // } else {
-    //   reader = conf.getConfResourceAsReader(file);
-    // }
-    // try {
-    //   if (reader == null) {
-    //     reader = new FileReader(file);
-    //   }
-    //   readConfiguration(reader);
-    // } catch (IOException e) {
-    //   LOG.error(org.apache.hadoop.util.StringUtils.stringifyException(e));
-    // }
   }
 
     public Configuration getConf() {
