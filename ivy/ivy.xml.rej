@@ -1,0 +1,89 @@
+***************
+*** 59,97 ****
+  			<exclude org="org.mortbay.jetty" name="jsp-*" />
+  			<exclude org="ant" name="ant" />
+  		</dependency>
+- 
+  		<dependency org="org.apache.tika" name="tika-core" rev="1.6" />
+  		<dependency org="com.ibm.icu" name="icu4j" rev="4.0.1" />
+- 
+  		<dependency org="xerces" name="xercesImpl" rev="2.9.1" />
+  		<dependency org="xerces" name="xmlParserAPIs" rev="2.6.2" />
+  		<dependency org="oro" name="oro" rev="2.0.8" />
+- 
+  		<dependency org="com.google.guava" name="guava" rev="11.0.2" />
+  		<dependency org="com.google.code.crawler-commons" name="crawler-commons"
+  			rev="0.5" />
+- 
+  		<!--Configuration: test -->
+- 
+  		<!--artifacts needed for testing -->
+  		<dependency org="junit" name="junit" rev="4.11" conf="test->default" />
+- 
+  		<dependency org="org.apache.hadoop" name="hadoop-test" rev="1.2.0"
+  			conf="test->default" />
+- 
+  		<dependency org="org.mortbay.jetty" name="jetty-client"
+  			rev="6.1.22" conf="test->default" />
+- 
+  		<dependency org="org.mortbay.jetty" name="jetty" rev="6.1.22"
+  			conf="test->default" />
+  		<dependency org="org.mortbay.jetty" name="jetty-util" rev="6.1.22"
+  			conf="test->default" />
+- 
+  		<!--global exclusion -->
+  		<exclude module="jmxtools" />
+  		<exclude module="jms" />
+  		<exclude module="jmxri" />
+- 
+  	</dependencies>
+- 
+  </ivy-module>
+--- 59,105 ----
+  			<exclude org="org.mortbay.jetty" name="jsp-*" />
+  			<exclude org="ant" name="ant" />
+  		</dependency>
++ 		
+  		<dependency org="org.apache.tika" name="tika-core" rev="1.6" />
+  		<dependency org="com.ibm.icu" name="icu4j" rev="4.0.1" />
++ 		
+  		<dependency org="xerces" name="xercesImpl" rev="2.9.1" />
+  		<dependency org="xerces" name="xmlParserAPIs" rev="2.6.2" />
+  		<dependency org="oro" name="oro" rev="2.0.8" />
++ 		
+  		<dependency org="com.google.guava" name="guava" rev="11.0.2" />
+  		<dependency org="com.google.code.crawler-commons" name="crawler-commons"
+  			rev="0.5" />
++ 		
++ 		<!-- begin selenium dependencies -->
++ 		<dependency org="org.seleniumhq.selenium" name="selenium-java" rev="2.44.0" />
++ 		
++ 		<dependency org="com.opera" name="operadriver" rev="1.5">
++ 			<exclude org="org.seleniumhq.selenium" name="selenium-remote-driver" />
++ 		</dependency>
++ 		<!-- end selenium dependencies -->
++ 		
+  		<!--Configuration: test -->
++ 		
+  		<!--artifacts needed for testing -->
+  		<dependency org="junit" name="junit" rev="4.11" conf="test->default" />
++ 		
+  		<dependency org="org.apache.hadoop" name="hadoop-test" rev="1.2.0"
+  			conf="test->default" />
++ 		
+  		<dependency org="org.mortbay.jetty" name="jetty-client"
+  			rev="6.1.22" conf="test->default" />
++ 		
+  		<dependency org="org.mortbay.jetty" name="jetty" rev="6.1.22"
+  			conf="test->default" />
+  		<dependency org="org.mortbay.jetty" name="jetty-util" rev="6.1.22"
+  			conf="test->default" />
++ 		
+  		<!--global exclusion -->
+  		<exclude module="jmxtools" />
+  		<exclude module="jms" />
+  		<exclude module="jmxri" />
++ 		
+  	</dependencies>
++ 	
+  </ivy-module>

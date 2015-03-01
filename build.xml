@@ -178,6 +178,7 @@
       <packageset dir="${plugins.dir}/index-more/src/java"/>
       <packageset dir="${plugins.dir}/index-geoip/src/java"/>
       <packageset dir="${plugins.dir}/index-static/src/java"/>
+      <packageset dir="${plugins.dir}/mimetype-filter/src/java"/>
       <packageset dir="${plugins.dir}/indexer-dummy/src/java"/>
       <packageset dir="${plugins.dir}/indexer-elastic/src/java/" />
       <packageset dir="${plugins.dir}/indexer-solr/src/java"/>
@@ -535,7 +536,6 @@
     <typedef uri="antlib:org.apache.ivy.ant" onerror="fail" loaderRef="ivyLoader">
       <classpath>
         <pathelement location="${ivy.jar}" />
-        <pathelement location="/Users/arjunpola/Nutch_Tika/tika/tika-app/target-${tika-app-1.8-SNAPSHOT.jar}" />
       </classpath>
     </typedef>
     <fail>
@@ -587,6 +587,7 @@
       <packageset dir="${plugins.dir}/index-metadata/src/java"/>
       <packageset dir="${plugins.dir}/index-more/src/java"/>
       <packageset dir="${plugins.dir}/index-static/src/java"/>
+      <packageset dir="${plugins.dir}/mimetype-filter/src/java"/>
       <packageset dir="${plugins.dir}/indexer-dummy/src/java"/>
       <packageset dir="${plugins.dir}/indexer-elastic/src/java/" />
       <packageset dir="${plugins.dir}/indexer-solr/src/java"/>
@@ -974,6 +975,8 @@
         <source path="${plugins.dir}/index-basic/src/test/" />
         <source path="${plugins.dir}/index-geoip/src/java/" />
         <source path="${plugins.dir}/index-geoip/src/test/" />
+        <source path="${plugins.dir}/mimetype-filter/src/java/" />
+        <source path="${plugins.dir}/mimetype-filter/src/test/" />
         <source path="${plugins.dir}/indexer-dummy/src/java/" />
         <source path="${plugins.dir}/indexer-solr/src/java/" />
         <source path="${plugins.dir}/indexer-elastic/src/java/" />

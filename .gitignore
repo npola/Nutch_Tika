@@ -4,3 +4,4 @@ conf/hadoop-env.sh
 conf/slaves
 build/
 logs/
+runtime/
